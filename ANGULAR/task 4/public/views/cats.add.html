@@ -1,0 +1,11 @@
+ <form name="catsForm" ng-submit="submitCatForm()" novalidate>
+ 	<p><span>Name: </span>
+ 		<input type="text" ng-model="newCat.name" name="catName" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 500, 'blur': 0 } }" required auto-focus>
+ 		<label class="error">fill the field</label>
+ 	</p>
+ 	<image-preview></image-preview>
+ 	<p>
+ 		<input type="button" value="Cancel" ng-click="cleanForm()">
+ 		<input type="submit" value="Save" ng-disabled="catsForm.$invalid || file === undefined" enter-click>
+ 	</p>
+ </form>

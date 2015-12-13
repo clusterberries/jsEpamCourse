@@ -1,0 +1,85 @@
+body {
+	font-family: sans-serif;
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+}
+
+.active {
+	color: #000;
+	text-decoration: none;
+	cursor: default;
+}
+
+.mainContainer {
+	width: 75%;
+	min-width: 500px;
+	min-width: 500px;
+	max-width: 1000px;
+	margin: 0 auto;
+	padding-top: 30px;
+}
+
+ul {
+	padding: 0;
+}
+
+li {
+	display: inline-block;
+	margin: 20px;
+	list-style: none;
+	vertical-align: top;
+}
+
+.userHeader {
+	margin: 0;
+	float: right;
+	color: #555;
+}
+.userHeader span {
+	margin-right: 15px;
+}
+
+
+img {
+	height: 200px;
+}
+
+input[type=number] {
+	width: 50px;
+}
+
+form {
+	width: 500px;
+	/*margin: 10px 10px 10px 60px;*/
+	padding: 10px;
+	border: 1px solid #eee;
+}
+
+form span {
+	display: inline-block;
+	width: 140px;
+}
+
+form[name=editCatForm] {
+	margin-top: 10px;
+	width: 200px;
+}
+
+form[name=editCatForm] input[name=catName] {
+	display: block;
+}
+
+label.error {
+	display: none;
+}
+.error, .registrationMessage {
+	font-size: 12px;
+    color: #FA787E;
+}
+/*show the mistakes*/
+.ng-touched.ng-invalid-required + .error, 
+.ng-touched.ng-valid-required.ng-invalid ~ .error.secondError,
+.ng-touched.ng-invalid-parse ~ .error.secondError  {
+    display: inline;
+ }

@@ -1,0 +1,32 @@
+<h2>Create a new profile</h2>
+<p ng-show="isProfileExists" class="registrationMessage">You already have a profile on you computer. 
+If you create another one it will delete existing information and your cats.</p>
+<form name="signUpForm" ng-submit="submitSignUpForm()" novalidate>
+ 	<p><span>Username: </span>
+ 		<input type="text" ng-model="newUser.name" name="userName" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 500, 'blur': 0 } }" required ng-minlength="4" ng-maxlength="25">
+ 		<label class="error">fill the field</label>
+ 		<label class="secondError error">the length should be from 4 to 25</label>
+ 	</p>
+ 	<p><span>Email: </span>
+ 		<input type="text" ng-model="newUser.email" name="userEmail" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 500, 'blur': 0 } }" ng-pattern="/.+@.+\..+$/" required>
+ 		<label class="error">fill the field</label>
+ 		<label class="secondError error">invalid email</label>
+ 	</p>
+ 	<p><span>Password: </span>
+ 		<input type="password" ng-model="newUser.pass" name="userPass" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 500, 'blur': 0 } }" required ng-minlength="4" ng-maxlength="25">
+ 		<label class="error">fill the field</label>
+ 		<label class="secondError error">the length should be from 4 to 25</label>
+ 	</p>
+ 	<p><span>Repeat password: </span>
+ 		<input type="password" ng-model="newUser.passConfirm" name="userPassConfirm" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 500, 'blur': 0 } }" required confirm-password>
+ 		<label class="error">fill the field</label>
+ 		<label class="secondError error">the passwords are not the same</label>
+ 	</p>
+ 	<p>
+ 		<input type="button" value="Clean" ng-click="cleanForm()">
+ 		<input type="submit" value="Sign up">
+ 	</p>
+</form>
+<p ng-hide="$scope.signUpForm.$valid || isFormValid" class="error">
+	The form is invalid
+</p>

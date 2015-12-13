@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="catsApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Cats</title>
+	<link rel="stylesheet" href="./style.css">
+  
+</head>
+<body ng-controller="CatsController">
+
+	<div ng-controller="CatsFormController">
+		 <form name="catsForm" ng-submit="submitForm()" novalidate>
+		 	<p>Name: 
+		 		<input type="text" ng-model="newCat.name" name="catName" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 500, 'blur': 0 } }" required>
+		 		<label>fill the field</label>
+		 	</p>
+		 	<p>Url: 
+		 	<!-- debounce is delay of validation, url-validation is a custom validation by request -->
+		 		<input type="text" ng-model="newCat.imgUrl" name="catImgUrl" required url-validation ng-pattern="/\.png$|\.jpg$|\.jpeg$|\.bmp$|\.gif$/" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 500, 'blur': 0 }}" >
+		 		<label>fill the field</label>
+		 		<label class="invalid-value">invalid value</label>
+		 	</p>
+		 	<p>
+		 		<input type="button" value="Cancel" ng-click="cleanForm()">
+		 		<input type="submit" value="Save" ng-disabled="catsForm.$invalid">
+		 	</p>
+		 </form>
+	 </div>
+
+	<p>Added cats: </p>
+	<ul>
+		<li ng-repeat='cat in cats' ng-class="{viewed: cat.viewed}">
+ 			<h3 ng-click="showCat(cat)">{{cat.name}}</h3>
+ 			<img src="{{cat.imgUrl}}">
+		</li>
+	</ul> 
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+	<script src="./js/app.js"></script>
+	<script src="./js/controllers/CatsController.js"></script>
+	<script src="./js/controllers/CatsFormController.js"></script>
+	<script src="./js/directives/urlValidation.js"></script>
+</body>
+</html>

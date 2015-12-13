@@ -1,0 +1,222 @@
+@import url(style_general.css);
+
+
+/***** Navigation *****/
+
+.mobile-nav {
+	line-height: 11.56vw;
+}
+.mobile-nav label {
+	float: right;
+}
+
+
+
+/***** Banner *****/
+
+.banner h1 {
+	padding-top: 16.56vw;
+	padding-bottom: 3.44vw;
+}
+.banner .arrow {
+	display: inline-block;
+	padding-left: 35%;
+}
+
+
+/***** TextBox *****/
+
+.textBox {
+	line-height: 24.69vw;
+}
+.textBox .arrow {
+	height: 23.44vw;
+	line-height: 23.44vw;
+	display: block;
+	float: right;
+	text-align: center;
+}
+
+
+/***** Blocks ******/
+
+.blocks {
+	clear: both;
+}
+.block1 {
+	line-height: 87vw;
+	text-align: center;
+}
+
+
+
+/***** MEDIA QUERIES *****/
+
+@media screen and (min-width: 321px) {
+	.banner {
+		height: 52.7vw;
+	}
+	.banner h1 {
+		padding-top: 15.56vw;
+	}
+
+	.content {
+		padding: 10.69vw 10% 7.81vw 11%;
+	}
+	.content h2 {
+		font-size: 4.6vw;
+		margin-bottom: 5.69vw;
+	}
+	.columns {
+		font-size: 3.34vw;
+		line-height: 2;
+	}
+}
+
+
+@media screen and (min-width: 641px) {
+	/*navigation*/
+	/*hide nav with burger*/
+	.mobile-nav {
+		display: none;
+	}
+	header nav {
+		display: block;
+		background-color: #373c3f;
+		height: 9.5vw;
+		line-height: 8.5vw;
+		padding: 0 0 0 5.6vw;
+	}
+	nav li {
+		display: inline-block;
+		margin-right: 1.78vw;
+	}
+	nav li a {
+		font-size: 1.8vw;
+	}
+
+	/*banner*/
+	.banner {
+		height: 55.1vw;
+	}
+	.banner h1 {
+		padding-top: 17.4vw;
+	}
+	.banner .arrow {
+		padding-left: 33%;
+	}
+	
+	/*textbox*/
+	.textBox {
+		font-size: 3vw;
+		line-height: 24.1vw;
+	}
+	.textBox .arrow {
+		line-height: 22.44vw;
+	}
+
+	/*blocks*/
+	.blocks {
+		font-size: 0;
+	}
+	.blocks > div {
+		display: inline-block;
+		width: 33.33%;
+		vertical-align: middle;
+	}
+	.block1 {
+		height: inherit;
+		line-height: inherit;
+		font-size: 4vw;
+	}
+	
+	/*content*/
+	.content {
+		padding: 6.3vw 8% 3.81vw 7.8%;
+	}
+	.content h2 {
+		font-size: 3.6vw;
+		margin-bottom: 1.7vw;
+	}
+	.columns {
+		font-size: 0;		
+	}
+	.columns > div {
+		display: inline-block;
+		font-size: 1.7vw;
+		line-height: 1.9;
+		width: 44.9%;
+	}
+	.column1 {
+		width: 44.9%;
+		padding-right: 5.1%;		
+	}
+	.column2 {
+		display: block;
+		padding-left: 4%;
+	}
+	.columns p {
+		margin-bottom: 3.1vw;
+	}
+}
+
+/*just intermediate media query for better redability*/
+@media screen and (min-width: 800px) {
+	nav li a {
+		font-size: 1.5vw;
+	}
+	.content h2 {
+		font-size: 3vw;
+	}
+	.columns > div {
+		font-size: 1.41vw;
+	}
+}
+
+@media screen and (min-width: 981px) {
+	header nav {
+		padding: 0 0 0 5.2vw;
+	}
+	nav li a {
+		font-size: 1.41vw;
+	}
+
+	.banner {
+		height: calc(100vh - 9.5vw);
+		min-height: 40vw;
+	}
+
+	.banner h1 {
+		padding-top: 25vh;
+	}
+
+	.content {
+		padding-top: 4.8vw;
+	}
+	.content h2 {
+		font-size: 2.88vw;
+	}
+	.columns > div {
+		font-size: 1.35vw;
+		width: 47%;
+		padding-right: 3%;
+	}
+	.columns .column2 {
+		padding-left: 3%;
+		padding-right: 0;
+	}
+}
+
+@media screen and (min-width: 1300px) {
+	header nav {
+		height: 8vw;
+		line-height: 7vw;
+	}
+	.banner {
+		height: calc(100vh - 8vw);
+		min-height: 40vw;
+	}
+	.banner h1 {
+		padding-top: 20vh;
+	}
+}

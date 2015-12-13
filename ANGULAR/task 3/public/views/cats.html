@@ -1,0 +1,25 @@
+<p class="userHeader">
+	<span>Hello, {{user.name}}!</span>
+	<input type="button" value="Logout" ng-click="logout()">
+</p>
+
+<h2>The best cats. Enjoy!</h2>
+
+<h3><a ui-sref=".add" ui-sref-active="active">Add a new cat</a></h3>
+<div ui-view></div>
+
+<ul>
+	<li ng-repeat='cat in cats' ng-class="{viewed: cat.viewed}">
+			<h3 ng-click="showCat(cat)">{{cat.name}}</h3>
+			<img ng-src="{{cat.imgUrl}}">
+			<p>Votes: 
+				<input type="button" value="-" ng-click="vote(cat, false)" ng-disabled="cat.isUsers || cat.isUserVoted">
+				<span>{{cat.votes}}</span>
+				<!-- <input type="number" ng-model="cat.votes" ng-disabled="cat.isUsers || cat.isUserVoted" ng-change="vote(cat)"> -->
+				<input type="button" value="+" ng-click="vote(cat, true)" ng-disabled="cat.isUsers || cat.isUserVoted">
+			</p>
+			<input type="button" value="Delete" ng-show="cat.isUsers" ng-click="deleteCat(cat)">
+			<input type="button" value="Edit" ng-show="cat.isUsers" ng-click="editCat(cat)">
+			<div ui-view="editCat" ng-show="cat.id === editingCat"></div>
+	</li>
+</ul> 

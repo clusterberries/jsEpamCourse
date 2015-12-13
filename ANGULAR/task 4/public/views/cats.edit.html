@@ -1,0 +1,13 @@
+ <form name="editCatForm" ng-submit="submitEditCatForm()" novalidate>
+ 	<p><span>New name: </span>
+ 		<input type="text" ng-model="newName" name="catName" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 500, 'blur': 0 } }" required>
+ 		<label class="error">fill the field</label>
+ 	</p>
+ 	<p>
+ 		<input type="button" value="Select File" ng-model="file" ngf-select> <span>{{file[0].name}}</span>
+ 	</p>
+ 	<p>
+ 		<input type="button" value="Cancel" ng-click="cleanForm()">
+ 		<input type="submit" value="Save" ng-disabled="editCatForm.$invalid">
+ 	</p>
+ </form>

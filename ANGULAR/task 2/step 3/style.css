@@ -1,0 +1,52 @@
+body {
+	font-family: sans-serif;
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+}
+
+body > p {
+	margin: 30px 10px 10px 60px;
+	font-weight: bold;
+}
+
+div span {
+	margin: 10px;
+}
+
+li {
+	display: inline-block;
+	cursor: pointer;
+	margin: 10px 20px;
+	list-style: none;
+	vertical-align: top;
+}
+
+img {
+	height: 200px;
+}
+
+form {
+	width: 400px;
+	margin: 10px 10px 10px 60px;
+	padding: 10px;
+	border: 1px solid #ddd;
+}
+
+form input[type=text] {
+	width: 220px;
+}
+
+label {
+	display: none;
+}
+/*show the first mistake*/
+.ng-touched.ng-invalid-required + label {
+    color: #FA787E;
+    display: inline;
+ }
+ /*show the second mistake*/
+.ng-touched.ng-valid-required.ng-invalid ~ .invalid-value {
+ 	color: #FA787E;
+    display: inline;
+ }

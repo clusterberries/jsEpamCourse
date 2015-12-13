@@ -1,0 +1,171 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(http://fonts.googleapis.com/css?family=Quicksand);
+
+/*
+I use here relarive values - vw and %. 1 vw is equal to the width of viewport.
+So even fonts and height of blocks are stretchable. This is awesome! :)
+Support IE9+.
+
+The layout is mobile first.
+Navigation can be shown/hidden.
+
+When the width is more than 981px the nav and banner stretch  for the entire window.
+/*
+
+
+/***** General *****/
+* {
+	padding: 0;
+	margin: 0;
+	outline: none;
+}
+body {
+	background-color: #ebebeb;
+	font-size: 4.4vw;
+	font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2 {
+	font-weight: normal;
+}
+
+.arrow {
+	font-family: 'Quicksand', sans-serif;
+	font-weight: bold;
+	color: #fff;
+	cursor: pointer;
+}
+
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+li {
+	list-style: none;
+}
+
+.banner h1, .banner p, .textBox > div{
+	margin-left: 8%;
+}
+
+
+/***** Navigation *****/
+
+header {
+	background-color: #373c3f;	
+	color: #ebebeb;
+	font-size: 3.75vw;
+}
+nav a {
+	color: #ebebeb;	
+}
+
+.mobile-nav {
+	height: 11.56vw;
+	padding-left: 5.6%;
+}
+.mobile-nav label {
+	display: block;
+	background: #202529 0 0 url(./images/burger.png) no-repeat;
+	background-size: cover;
+	height: 11.56vw;
+	width: 12.34vw;
+}
+/*checkbox is used for hide/show nav*/
+header input {
+	display: none;
+} 
+/*when checked show nav, not checked - hide*/
+header nav {
+	display: none;
+	background-color: #202529;
+	padding: 5.63vw 0 5.63vw 5.63vw;
+	line-height: 1.6;
+}
+header input:checked+nav {
+	display: block;
+}
+
+
+/***** Banner *****/
+
+.banner {
+	width: 100%;
+	height: 54.7vw;
+	color: #fff;
+    background: -webkit-linear-gradient(119deg, #19b4c6 0%, #078aa4 100%);
+    background:    -moz-linear-gradient(119deg, #19b4c6 0%, #078aa4 100%);
+    background:     -ms-linear-gradient(119deg, #19b4c6 0%, #078aa4 100%);
+    background:         linear-gradient(119deg, #19b4c6 0%, #078aa4 100%);
+}
+.banner h1 {
+	font-size: 6vw;
+}
+.banner p span:first-child {
+	opacity: 0.5;
+}
+.banner p {
+	font-size: 3.4vw;
+}
+
+
+/***** TextBox *****/
+
+.textBox {
+	background-color: #27212c;
+	color: #9282A0;
+	height: 23.44vw;
+	font-size: 3.13vw;
+}
+.textBox .arrow {
+	background-color: #bc3183;
+	color: #fff;
+	width: 21.8vw;
+	font-size: 4.69vw;
+}
+
+
+/***** Blocks ******/
+
+.blocks {
+	background-color: #5b0fa1;	
+}
+.block1 {
+	width: 100%;
+	height: 87vw;
+	font-size: 11.56vw;
+
+}
+.blocks img {
+	width: 100%;
+}
+.blocks .img {
+	font-size: 0;
+}
+
+
+/***** Content *****/
+
+.content {
+	color: #515151;
+	padding: 9.69vw 10% 7.81vw 11%;
+
+}
+.content h2 {
+	font-size: 5.94vw;
+	color: #088ca5;
+	margin-bottom: 4.69vw;
+}
+.columns {
+	line-height: 1.6;
+	font-size: 4.23vw;
+}
+.columns p {
+	margin-bottom: 7.81vw;
+}
+.column2 {
+	display: none;
+}

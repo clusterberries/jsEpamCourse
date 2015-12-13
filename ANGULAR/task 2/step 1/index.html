@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="catsApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Cats</title>
+	<link rel="stylesheet" href="./style.css">
+  
+</head>
+<body ng-controller="CatsController">
+	<ul>
+		<li ng-repeat='cat in cats' ng-class="{viewed: cat.viewed}">
+ 			<span ng-click="showCat(cat)">{{cat.name}}</span>
+		</li>
+	</ul>
+
+	<div ng-show="showCatsDiv">
+		<h2>{{currentCat.name}}</h2>
+		<img src="{{currentCat.imgUrl}}">
+		<p>Votes: <input type="number" ng-model="currentCat.votes"></p>
+	</div>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+ <script src="app.js"></script>
+</body>
+</html>

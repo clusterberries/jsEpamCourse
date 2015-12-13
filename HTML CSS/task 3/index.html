@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>UI Kit task</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div class="container calendar">
+		<div class="header">
+			<div class="icon arr prev"></div>
+			<div class="month">May 2014</div>
+			<div class="icon arr next"></div>
+		</div>
+		<table>
+			<tr>
+				<th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
+			</tr>
+			<tr>
+				<td class="notCurMonth">29</td><td class="notCurMonth">30</td>
+				<td>1</td><td>2</td><td class="curDay">3</td><td>4</td><td>5</td>
+			</tr>
+			<tr>
+				<td>6</td><td class="holiday">7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td>
+			</tr>
+			<tr>
+				<td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td>
+			</tr>
+			<tr>
+				<td>20</td><td>21</td><td>22</td><td class="holiday">23</td><td>24</td><td>25</td><td>26</td>
+			</tr>
+			<tr>
+				<td>27</td><td>28</td><td>29</td><td>30</td>
+				<td class="notCurMonth">1</td><td class="notCurMonth">2</td class="notCurMonth"><td class="notCurMonth">3</td>
+			</tr>
+		</table>
+		<button class="button-big">Add event</button>
+	</div>
+
+
+	<form action="" class="container booking" name="booking">
+		<div class="header">
+			<div>
+				<h2>Hotel Relais</h2>
+				<div class="icon"></div>
+				<p>Paris, France</p>
+			</div>
+		</div>
+		
+		<div class="dates">
+			<label for="checkin">Check in</label>
+			<div class="input-text">
+				<input type="datetime" value="9 July, 2016" id="checkin" readonly>
+				<div class="icon"></div>
+			</div>
+
+			<label for="checkout">Check out</label>
+			<div class="input-text">
+				<input type="datetime" value="16 July, 2016" id="checkout" readonly>
+				<div class="icon"></div>
+			</div>
+
+			<div class="div-chck">
+				<input type="checkbox" id="check">
+				<div class="icon input-text"></div>
+				<label for="check" class="checkbox">Flexible dates</label>
+			</div>
+		</div>
+		
+		<ul class="persons">
+			<li>
+				<label>Adults</label>
+				<div class="input-text">
+					<select name="adults">
+						<option value="1">1</option>
+						<option value="2" selected="selected">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>   
+					</select>
+					<div class="icon"></div>
+				</div>
+			</li>
+			<li>
+				<label>Children</label>
+				<div class="input-text">
+					<select name="children">
+						<option value="0">0</option>
+						<option value="1" selected="selected">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>   
+					</select>
+					<div class="icon"></div>
+				</div>
+			</li>
+		</ul>
+
+		<button class="button-big"><div class="icon"></div>Search rooms</button>
+	</form>
+
+
+	<form action="" class="container email" name="email">
+		<div>
+			<div class="input-text div-email">
+				<input type="text" placeholder="Email">
+				<div class="text-email">rick.james@mail.com<span class="icon cross"></span></div>
+				<div class="icon plus"></div>
+			</div>
+
+			<div class="input-text div-file">
+				<label>Subject</label>
+				<input type="file">
+				<div class="icon mail"></div>
+			</div>
+
+			<div class="input-text div-msg">
+				<textarea placeholder="Message"></textarea>
+			</div>
+			<button>Send</button>
+		</div>
+	</form>
+
+
+	<div class="container destination">
+		<ul class="icons">
+			<li class="current">
+				<div class="icon"></div>
+			</li>
+			<li>
+				<div class="icon"></div>
+			</li>
+			<li>
+				<div class="icon"></div>
+			</li>
+		</ul>
+		<ul class="wrapper">
+			<li class="item1">
+				<div class="text">
+					<h2>My most favourite<br>place in the world</h2>
+					<p><span class="count">154</span> Reviews</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a pulvinar ipsum. Aliquam sit amet iaculis dolor. Vivamus sed diam sollicitudin. 
+					</p>
+					<p><a href="#">Read more</a></p>
+				</div>
+				<div class="img">
+					<div class="comms"><div class="icon"></div>752</div>
+					<div class="likes"><div class="icon"></div>2709</div>
+				</div>
+			</li>
+			<li class="item2">
+				<div>
+					<h2></h2>
+					<p></p>
+					<p></p>
+					<p></p>
+				</div>
+				<div class="img">
+					<div class="comms"></div>
+					<div class="likes"></div>
+				</div>
+			</li>
+			<li class="item3">
+				<div>
+					<h2></h2>
+					<p></p>
+					<p></p>
+					<p></p>
+				</div>
+				<div class="img">
+					<div class="comms"></div>
+					<div class="likes"></div>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+
+	<div class="container graph">
+		<ul class="vals">
+			<li>40</li>
+			<li>30</li>
+			<li>20</li>
+			<li>0</li>
+		</ul>
+
+		<ul class="days">
+			<li>Mon</li>
+			<li>Tues</li>
+			<li>Wed</li>
+			<li>Thu</li>
+			<li>Fri</li>
+			<li>Sat</li>
+			<li>Sun</li>
+		</ul>
+
+		<ul class="cols">
+			<li class="col1" style="height:49px" data-after="17">
+				<div></div>
+			</li>
+			<li class="col2" style="height:62px" data-after="17">
+				<div></div>
+			</li>
+			<li class="col3" style="height:119px" data-after="17">
+				<div></div>
+			</li>
+			<li class="col4" style="height:158px" data-after="17">
+				<div></div>
+			</li>
+			<li class="col5" style="height:129px" data-after="17">
+				<div></div>
+			</li>
+			<li class="col6" style="height:169px" data-after="34">
+				<div></div>
+			</li>
+			<li class="col7" style="height:143px" data-after="17">
+				<div></div>
+			</li>
+		</ul>
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="catsApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Cats</title>
+	<link rel="stylesheet" href="./style.css">
+  
+</head>
+<body>
+
+	<div ui-view class="mainContainer"></div>
+	
+
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-route.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+	<script src="./js/libs/ng-file-upload-shim.js"></script>
+	<script src="./js/libs/ng-file-upload.js"></script>
+
+	<script src="./js/app.js"></script>
+
+	<script src="./js/services/LocalStorageUserService.js"></script>
+	<script src="./js/services/SessionService.js"></script>
+	<script src="./js/services/CatsService.js"></script>
+
+	<script src="./js/controllers/CatsController.js"></script>
+	<script src="./js/controllers/CatsFormController.js"></script>
+	<script src="./js/controllers/EditCatFormController.js"></script>
+	<script src="./js/controllers/SingInController.js"></script>
+	<script src="./js/controllers/SingUpController.js"></script>
+
+<!--	<script src="./js/directives/urlValidation.js"></script> -->
+	<script src="./js/directives/confirmPassword.js"></script> 
+	<script src="./js/directives/autoFocus.js"></script> 
+	<script src="./js/directives/enterClick.js"></script> 
+	<script src="./js/directives/imagePreview.js"></script> 
+	<script src="./js/directives/voteSpinner.js"></script> 
+</body>
+</html>

@@ -1,0 +1,221 @@
+@font-face {
+	font-family: "Gotham Book";
+	font-style: normal;
+	src: url("./gotham/GothamSSm-Book.eot");
+	src: url("./gotham/GothamSSm-Book-.eot#iefix") format("embedded-opentype"), 
+		url("./gotham/GothamSSm-Book.woff") format("woff"), 
+		url("./gotham/GothamSSm-Book.ttf") format("truetype");
+}
+@font-face {
+	font-family: "Gotham Medium";
+	font-style: normal;
+	src: url("./gotham/GothamSSm-Medium.eot");
+	src: url("./gotham/GothamSSm-Medium-.eot#iefix") format("embedded-opentype"), 
+		url("./gotham/GothamSSm-Medium.woff") format("woff"), 
+		url("./gotham/GothamSSm-Medium.ttf") format("truetype");
+}
+@font-face {
+	font-family:"Gotham Light";
+	font-style:normal;
+	src:url("./gotham/GothamSSm-Light.eot");
+	src:url("./gotham/GothamSSm-Light-.eot#iefix") format("embedded-opentype"), 
+		url("./gotham/GothamSSm-Light.woff") format("woff"),
+		url("./gotham/GothamSSm-Light.ttf") format("truetype");
+}
+
+/* colors
+#fb6362 pink
+#f98584 pink hover
+
+#404a58 grey-blue
+#5c6a7e grey-blue hover
+
+#666666 grey text
+#4d4d4d grey text 2
+#999999 fixed text
+#f4f4f4 bg-c inputs
+
+*/
+
+
+/***** General *****/
+
+* {
+	padding: 0;
+	margin: 0;
+	outline: none;
+}
+body {
+	background-color: #d9d9d9;
+	font-size: 14px;
+	font-family: "Gotham Book", sans-serif;
+}
+li {
+	list-style: none;
+}
+
+/* for containers */
+.container {
+	margin: 10vh auto 0 auto;
+	background-color: #fff;
+	overflow: hidden;
+	border-radius: 4px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.2), 0 2px 3px rgba(0,0,0,0.4);
+}
+.container .icon {
+	background-image: url(./icons.png);
+	width: 27px;
+	height: 30px;
+}
+.calendar th, .graph {
+	font-family: "Gotham Medium", sans-serif;
+	color: #666666;
+}
+/*buttons*/
+button {
+	text-transform: uppercase;
+	border: none;
+	background-color: #fb6362;
+	color: #fff;
+	margin: 15px auto 0 auto;
+	display: block;
+	box-shadow: 0 3px 5px rgba(0,0,0,0.2), 0 1px 2px rgba(0,0,0,0.8);
+	border-radius: 4px;
+	font-size: 15px;
+	font-family: "Gotham Book", sans-serif;
+	cursor: pointer;
+	-webkit-transition: background-color 0.2s; 
+	   -moz-transition: background-color 0.2s; 
+		-ms-transition: background-color 0.2s; 
+		 -o-transition: background-color 0.2s; 
+			transition: background-color 0.2s; 
+	width: 180px;
+	height: 58px;
+}
+button:hover {
+	background-color: #f98584;
+}
+button:active {
+	background-color: #f98584;
+	position: relative;
+	top: 2px;
+}
+
+
+
+/***** Graph *****/
+
+.graph {
+	width: 791px;
+	height: 340px;
+	font-size: 12px;
+	position: relative;
+}
+/*valuses*/
+.graph .vals {
+	width: 703px;
+	margin: -3px auto 0;
+}
+.graph .vals li {
+	padding: 52px 0 2px;
+	border-bottom: 1px solid #eaeaea;
+	position: relative;
+	left: -3px;
+}
+/*days*/
+.graph .days {
+	margin: 8px 0 0 104px;
+}
+.graph .days li {
+	display: inline-block;
+	text-align: center;
+	width: 55px;
+	margin-right: 31px;
+}
+/*columns*/
+.cols {
+	display: none;
+	position: absolute;
+	bottom: 60px;
+	left: 104px;
+}
+.cols li {
+	display: inline-block;
+	position: relative;
+	width: 55px;
+	height: 100px;
+	margin-right: 31px;
+	-webkit-transform: rotate(180deg);
+	   -moz-transform: rotate(180deg);
+		-ms-transform: rotate(180deg);
+		 -o-transform: rotate(180deg);
+			transform: rotate(180deg);
+}
+
+.cols div[data-value] {
+	height: 100%;
+	background-color: #fb6362;
+	border-radius: 2px;
+	-webkit-animation: raise 1s ease-out;
+	   -moz-animation: raise 1s ease-out;
+		-ms-animation: raise 1s ease-out;
+		 -o-animation: raise 1s ease-out;
+			animation: raise 1s ease-out;
+	-webkit-transition: background 0.3s;
+	   -moz-transition: background 0.3s;
+		-ms-transition: background 0.3s;
+		 -o-transition: background 0.3s;
+			transition: background 0.3s;
+}
+.cols div[data-value]:hover {
+	background-color: #f98584;
+}
+
+.tip {
+	color: #fff;
+	background-color: #404a58;
+	position: absolute;
+	width: 55px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	bottom: -45px;
+	border-radius: 2px;
+	display: none;
+	-webkit-transform: rotate(180deg);
+	   -moz-transform: rotate(180deg);
+		-ms-transform: rotate(180deg);
+		 -o-transform: rotate(180deg);
+			transform: rotate(180deg);
+}
+.tip-arr {
+	display: none;
+	position: absolute;
+	bottom: -15px;
+	left: 20px;
+	border: 8px solid transparent;	
+	border-bottom: 8px solid #404a58;
+}
+
+/*animation*/
+@-webkit-keyframes raise {
+  from { height: 0%; }
+  to { height: 100%; }
+}
+@-moz-keyframes raise {
+  from { height: 0%; }
+  to { height: 100%; }
+}
+@-ms-keyframes raise {
+  from { height: 0%; }
+  to { height: 100%; }
+}
+@-o-keyframes raise {
+  from { height: 0%; }
+  to { height: 100%; }
+}
+@-keyframes raise {
+  from { height: 0%; }
+  to { height: 100%; }
+}
+

@@ -1,0 +1,15 @@
+<h2>Sing in and look at cats</h2>
+<form name="signInForm" ng-submit="submitSignInForm()" novalidate>
+ 	<p><span>Username: </span>
+ 		<input type="text" ng-model="currentUser.name" name="userName" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 500, 'blur': 0 } }" required>
+ 		<label class="error">fill the field</label>
+ 	</p>
+ 	<p><span>Password: </span>
+ 		<input type="password" ng-model="currentUser.pass" name="userName" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 500, 'blur': 0 } }" required>
+ 		<label class="error">fill the field</label>
+ 	</p>
+ 	<p><input type="submit" value="Log in"></p>
+</form>
+<p ng-hide="isInputDataCorrect" class="error">
+	The username or the password is incorrect
+</p>

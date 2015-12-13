@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="catsApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Cats</title>
+	<link rel="stylesheet" href="./style.css">
+  
+</head>
+<body ng-controller="CatsController">
+
+	<div>
+		<span>Name: <input type="text" ng-model="searchName"></span>
+		<span>Order: <select ng-model='sortOrder'>
+			<option value='votes'>Asc</option>
+			<option value='-votes'>Dsc</option>
+		</select></span>
+		<span>Minimum votes: <input type="number" ng-model="minVotes"></span>
+		<button ng-click='searchCats()'>Search</button>
+	</div>
+
+	<ul ng-show="displaySearch">
+		<li ng-repeat='cat in cats | filter: {name: activeSearchName} | orderBy: sortOrder | filter: searchFilter()'>
+			<h2>{{cat.name}}</h2>
+			<img src="{{cat.imgUrl}}">
+			<p>Votes: <input type="number" ng-model="cat.votes"></p>
+		</li>
+	</ul>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+ <script src="app.js"></script>
+</body>
+</html>

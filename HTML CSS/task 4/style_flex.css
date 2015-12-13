@@ -1,0 +1,179 @@
+@import url(style_general.css);
+
+
+.arrow {
+	display: flex;
+	justify-content: center;
+  	align-items: center;
+}
+
+/***** Navigation *****/
+
+.mobile-nav, .textBox {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+/***** Banner *****/
+
+.banner {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.banner p {
+	display: flex;
+	justify-content: space-between;
+	margin-right: 21%;
+}
+.banner h1 {
+	margin-bottom: 3vw;
+	line-height: 1.1;
+}
+
+
+/***** TextBox *****/
+
+.textBox {
+	height: 22vw;
+}
+.textBox .arrow {
+	height: 100%;
+}
+
+
+/***** Blocks *****/
+
+.blocks {
+	display: flex;
+	flex-direction: column;
+}
+
+
+/***** MEDIA QUERIES *****/
+
+@media screen and (min-width: 321px) {
+	.banner {
+		height: 51.7vw;
+	}
+	.content {
+		padding: 10.69vw 10% 7.81vw 11%;
+	}
+	.content h2 {
+		font-size: 4.6vw;
+		margin-bottom: 5.69vw;
+	}
+	.columns {
+		font-size: 3.34vw;
+		line-height: 2;
+	}
+}
+
+@media screen and (min-width: 641px) {
+	/*navigation*/
+	/*hide nav with burger*/
+	.mobile-nav {
+		display: none;
+	}
+	header nav {
+		display: block;
+		background-color: #373c3f;
+		height: 8.5vw;
+		padding: 1.2vw 29.3vw 0 5.4vw;
+	}
+	header ul {
+		display: flex;
+		justify-content: space-between;
+	}
+	nav li a {
+		font-size: 1.8vw;
+	}
+
+	/*banner*/
+	.banner {
+		height: 55.5vw;
+	}
+	
+	/*textBox*/
+	.textBox {
+		font-size: 3vw;
+	}
+	
+	/*blocks*/
+	.blocks {
+		flex-direction: row;
+	}
+	.block1 {
+		height: inherit;
+		font-size: 4vw;
+	}
+	.blocks > div {
+		flex-basis: 33.33%;
+	}
+
+	/*content*/
+	.content {
+		padding: 6.3vw 9% 3.81vw 7.8%;
+	}
+	.content h2 {
+		margin-bottom: 1.7vw;
+	}
+	.columns {
+		display: flex;
+	}
+	.columns > div {
+		font-size: 1.7vw;
+		line-height: 1.9;
+	}
+	.column1 {
+		padding-right: 9.4%;
+	}
+	.column2 {
+		display: block;
+	}
+	.columns p {
+		margin-bottom: 3.1vw;
+	}
+}
+
+/*just intermediate media query for better redability*/
+@media screen and (min-width: 800px) {
+	header nav {
+		padding: 1.2vw 39.3vw 0 5.4vw;
+	}
+	nav li a {
+		font-size: 1.5vw;
+	}
+	.content h2 {
+		font-size: 3vw;
+	}
+	.columns > div {
+		font-size: 1.41vw;
+	}
+}
+
+@media screen and (min-width: 981px) {
+	header nav {
+		padding: 1.2vw 42.0vw 0 5.0vw;
+	}
+	nav li a {
+		font-size: 1.41vw;
+	}
+
+	.banner {
+		height: calc(100vh - 9.5vw);
+		min-height: 40vw;
+	}
+
+	.content {
+		padding-top: 4.8vw;
+	}
+	.content h2 {
+		font-size: 2.88vw;
+	}
+	.columns > div {
+		font-size: 1.35vw;
+	}
+}

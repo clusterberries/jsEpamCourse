@@ -1,0 +1,136 @@
+/* colors
+
+
+#404a58 grey-blue
+#ffeeee grey-blue hover
+
+#666666 grey text
+#4d4d4d grey text 2
+#999999 fixed text
+#f4f4f4 bg-c inputs
+
+*/
+
+* {
+	padding: 0;
+	margin: 0;
+	outline: none;
+}
+
+body {
+	background-color: #666666;
+	font-size: 16px;
+	font-family: Tahoma, sans-serif;
+	color: #444;
+}
+
+li {
+	list-style: none;
+}
+
+.container {
+	margin: 20px auto 0 auto;
+	background-color: #fff;
+	box-shadow: 0 0 10px rgba(0,0,0,0.2), 0 2px 3px rgba(0,0,0,0.4);
+	width: 400px;
+}
+
+
+/* header */
+header {
+	padding: 10px;
+	position: relative;
+}
+header h1 {
+	margin-bottom: 10px;
+}
+.arrow-sort {
+	border: 10px solid transparent;	
+	border-top: 12px solid #998888;
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 23px;
+	right: 20px;
+	cursor: pointer;
+}
+.dsc {
+	transform: rotate(180deg);
+	top: 13px;
+}
+header input {
+	width: 100%;
+	padding: 2px 5px;
+}
+
+
+/* main list*/ 
+main input {
+	width: 380px;
+	border: none;
+}
+
+.plus {
+	background-image: url(./icons/iconmonstr-plus-5-icon.svg);
+	background-size: contain;
+	background-color: #eedddd;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 25px 25px;
+}
+.plus:hover {
+	background-color: #ddcccc;
+}
+.active {
+	background-color: #fff6f6;
+}
+.plus.active {
+	background-image: none;
+}
+.plus.active:hover {
+	background-color: #fff6f6;
+}
+.plus input {
+	padding: 10px;
+	transition: background 0.2s;
+	background-color: transparent;
+	cursor: pointer;
+}
+.plus.active input {
+	cursor: default;
+}
+
+/* items */
+li {
+	position: relative;
+}
+
+li input {
+	background-color: #ffeeee;
+	padding: 15px 10px;
+}
+
+.icon {
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 7px;
+	right: 10px;
+	opacity: 0.3;
+	transition: opacity 0.2s;
+	cursor: pointer;
+	background-size: cover;
+}
+.cross {
+	background-image: url(./icons/iconmonstr-x-mark-4-icon.svg);
+}
+.edit {
+	background-image: url(./icons/iconmonstr-edit-10-icon.svg);
+	right: 42px;
+}
+.ok {
+	background-image: url(./icons/iconmonstr-check-mark-4-icon.svg);
+}
+.no-display {
+	display: none;
+}
